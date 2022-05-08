@@ -1,0 +1,50 @@
+<view class='fenlei'>
+  <text>药品</text>
+  <!-- 下拉框 -->
+    <view class='select_box'>
+      <view class='select' catchtap='selectTaps'>
+        <text class='select_text'>{{selectDatas[indexs]}}</text>
+      </view>
+      <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+        <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+      </view>
+    </view>
+   
+</view>
+<view  wx:for="{{list}}" wx:for-item="item" wx:key="list"  > 
+<view class="list_td" bindtap="yaopin" data-index="{{index}}">  
+  <view class="tdimg" wx:if="isimg"  ><image  bindtap="yaopin"  src="{{item.src}}" data-urlimg="{{item.urlimg}}"></image> </view>  
+    <view class="td" >
+      {{item.alt}}<text>\r\n</text>
+    {{item.number}}<text>\r\n</text>
+    {{item.Specifications}}<text>\r\n</text>
+    </view>
+  <view class="divLine"></view>
+
+</view>
+</view>
+<view class='fenlei'>
+  <text>保健</text>
+  <!-- 下拉框 -->
+    <view class='select_box'>
+      <view class='select' catchtap='selectTaps_health'>
+        <text class='select_text'>{{Healthmedicine[indexs]}}</text>
+      </view>
+      <view class='option_box' style='height:{{isHealthmedicine?(Healthmedicine.length>5?300:Healthmedicine.length*60):0}}rpx;'>
+        <text class='option' style='{{indexs==Healthmedicine.length-1&&"border:0;"}}' wx:for='{{Healthmedicine}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps_health'>{{item}}</text>
+      </view>
+    </view>
+   
+</view>
+<view  wx:for="{{healthlist}}" wx:for-item="item" wx:key="list" data-index="{{index}}"> 
+<view class="list_td">  
+  <view class="tdimg" wx:if="isimg"><image src="{{item.src}}"></image> </view>  
+    <view class="td">
+    {{item.alt}}<text>\r\n</text>
+    {{item.number}}<text>\r\n</text>
+    {{item.Specifications}}<text>\r\n</text>
+    </view>
+  <view class="divLine"></view>
+
+</view>
+</view>

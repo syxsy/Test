@@ -1,0 +1,35 @@
+<view class="container">
+    <view class="part1">
+        <view class="part1" >
+             <image style="height: 150px;" src="{{one.path}}"></image>
+        </view>
+    </view>
+    <view class="part2">
+        <view style="margin-left: 10%; position: absolute;width: 50%;font-weight: 300;">
+         price：{{one.price}}元/人
+        </view>
+        <view style="position: absolute;width: 50%;font-weight: 300;margin-left: 50%;">
+         评分：{{one.score}}
+        </view>
+        
+        <view style="margin-left: 10%;position: absolute;width: 100%;height: 10%;bottom: 40%;">{{one.title}}</view>
+    </view>
+    <view class="part3">
+        
+        <scroll-view scroll-y="true" style="margin-left: 30px; width: 80%; height: 50%; border-radius: 10px;border-style: dotted;" bindscrolltolower="lower" bindchange="loadingChange">
+    <view  wx:for="{{contentlist}}" wx:for-item="item" wx:key="list" data-index="{{index}}"> 
+      <view class="list_td" data-id="{{item.bodyitemid}}">  
+          <view class="td" >
+          <view style="margin-left: 20px; font-weight: 100;">{{item.username}}:{{item.content}}<text>\r\n</text></view>
+          </view>
+      </view>
+    </view>  
+        </scroll-view>
+        <view style="margin-top: 10px;">
+            <input style="position: absolute; margin-left: 30px; text-align: center; width: 50%; border-radius: 10px;border-style: dashed;" bindinput="getContent" id="Content" name="Content" maxlength='14' type="text" placeholder="请输入评论" />
+          <button bindtap="pingjia" style="background-color: chocolate; margin-left: 200px;position: absolute;width: 30%;font-size: 14px;">评价</button>
+        </view>
+        
+        
+    </view>
+</view>

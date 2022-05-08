@@ -1,0 +1,29 @@
+<view class="container">
+    <view class="part1">
+        <view class="part1" >
+             <image style="height: 150px;" src="{{one.img}}"></image>
+        </view>
+    </view>
+    <view class="part2">
+        <view style="margin-left: 10%; position: absolute;width: 50%;font-weight: 300;">
+         阅读量：{{one.readnumber}}
+        </view>
+        <view style="position: absolute;width: 50%;font-weight: 300;margin-left: 50%;">
+         发布时间：{{one.date}}
+        </view>
+        
+        <view style="margin-left: 10%;position: absolute;width: 100%;height: 10%;bottom: 40%;">
+        {{one.title}}
+        </view>
+      
+    </view>
+    <view class="part3">
+        
+        <scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="lower" bindchange="loadingChange">
+        <view style="font-weight: 100;">{{one.content}}</view>
+            
+        </scroll-view>
+        
+        
+    </view>
+</view>

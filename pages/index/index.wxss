@@ -1,0 +1,32 @@
+/**index.wxss**/
+.container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+}
+.part1 {
+  position: absolute;
+  height: 20%;
+  margin-top: 0%;
+  flex-direction: column;
+  align-items: center;
+  bottom: 80%;
+}
+.part2 {
+  position: absolute;
+  height: 40%;
+  bottom: 35%;
+  flex-direction: column;
+  width: 100%;
+}
+.part3 {
+  position: absolute;
+  height: 40%;
+  bottom: 0.2%;
+  flex-direction: column;
+  width: 100%;
+}

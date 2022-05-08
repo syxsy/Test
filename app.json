@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/health/health",
+        "pages/tool/BMIManage/bmimanage",
+        "pages/logs/logs",
+        "pages/my/my",
+        "pages/tool/Bodybuilding/Bodybuilding",
+        "pages/HealthInformation/CommonSense/CommonSense",
+        "pages/HealthInformation/diet/diet",
+        "pages/HealthInformation/motion/motion",
+        "pages/HealthInformation/detail/detail",
+        "pages/HealthInformation/FourSeasonsRegimen/seasons",
+        "pages/tool/BodyDetail/bodydetail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "个人健康管理",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#8c8c8c",
+        "selectedColor": "#f4645f",
+        "backgroundColor": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "pages/images/shouye.png",
+                "selectedIconPath": "pages/images/shouye.png"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "我的",
+                "iconPath": "pages/images/my.png",
+                "selectedIconPath": "pages/images/my.png"
+            }
+        ],
+        "position": "bottom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

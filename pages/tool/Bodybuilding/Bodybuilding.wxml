@@ -1,0 +1,14 @@
+
+    <view  wx:for="{{commonlist}}" wx:for-item="item" wx:key="list" data-index="{{index}}"> 
+      <view class="list_td" bindtap="detailbutton" data-id="{{item.bodyid}}">  
+        <view class="tdimg" ><image  src="{{item.path}}"></image> </view>  
+          <view class="td" >
+          <view style="font-weight: 900;">{{item.title}}<text>\r\n</text></view>
+         
+          <view style="margin-top: 10px; font-size: 13px;"> 地址： {{item.address}}<text>\r\n</text></view>
+          <view style="margin-top: 10px; font-size: 13px;"> 距离： {{item.distance}}m<text>\r\n</text></view>
+          </view>
+          <text>\r\n</text>
+      </view>
+  </view>
+

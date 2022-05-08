@@ -1,0 +1,73 @@
+<view class="page">
+ 
+ <!--顶部导航栏-->
+ <view class="swiper-tab">
+   <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">养生常识</view>
+   <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">四季养生</view>
+   <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">食疗养生</view>
+   <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">运动养生</view>
+ </view>
+
+ <!--内容主体-->
+ <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+   <swiper-item>
+    <view  wx:for="{{commonlist}}" wx:for-item="item" wx:key="list" data-index="{{index}}"> 
+      <view class="list_td" bindtap="detailbutton" data-id="{{item.id}}">  
+        <view class="tdimg" ><image  src="{{item.img}}"></image> </view>  
+          <view class="td" >
+          <view style="font-weight: 900;">{{item.title}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 来源： {{item.tag}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 阅读量： {{item.readnumber}}<text>\r\n</text></view>
+          <view style="font-size: 13px;">  发布时间： {{item.date}}<text>\r\n</text></view>
+          </view>
+          <text>\r\n</text>
+      </view>
+  </view>
+   </swiper-item>
+   <swiper-item>
+    <view  wx:for="{{commonlist}}" wx:for-item="item" wx:key="list" data-index="{{index}}"> 
+      <view class="list_td" bindtap="detailbutton" data-id="{{item.id}}">  
+        <view class="tdimg" ><image  src="{{item.img}}"></image> </view>  
+          <view class="td" >
+          <view style="font-weight: 900;">{{item.title}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 来源： {{item.tag}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 阅读量： {{item.readnumber}}<text>\r\n</text></view>
+          <view style="font-size: 13px;">  发布时间： {{item.date}}<text>\r\n</text></view>
+          </view>
+          <text>\r\n</text>
+      </view>
+  </view>
+   </swiper-item>
+   <swiper-item>
+    <view  wx:for="{{commonlist}}" wx:for-item="item" wx:key="list" data-index="{{index}}"> 
+      <view class="list_td" bindtap="detailbutton" data-id="{{item.id}}">  
+        <view class="tdimg" ><image  src="{{item.img}}"></image> </view>  
+          <view class="td" >
+          <view style="font-weight: 900;">{{item.title}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 来源： {{item.tag}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 阅读量： {{item.readnumber}}<text>\r\n</text></view>
+          <view style="font-size: 13px;">  发布时间： {{item.date}}<text>\r\n</text></view>
+          </view>
+          <text>\r\n</text>
+      </view>
+  </view>
+   </swiper-item>
+   <swiper-item>
+    <view  wx:for="{{commonlist}}" wx:for-item="item" wx:key="list" data-index="{{index}}"> 
+      <view class="list_td" bindtap="detailbutton" data-id="{{item.id}}">  
+        <view class="tdimg" ><image  src="{{item.img}}"></image> </view>  
+          <view class="td" >
+          <view style="font-weight: 900;">{{item.title}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 来源： {{item.tag}}<text>\r\n</text></view>
+          <view style="font-size: 13px;"> 阅读量： {{item.readnumber}}<text>\r\n</text></view>
+          <view style="font-size: 13px;">  发布时间： {{item.date}}<text>\r\n</text></view>
+          </view>
+          <text>\r\n</text>
+      </view>
+  </view>
+   </swiper-item>
+ </swiper>
+</view>
+
+ 
+

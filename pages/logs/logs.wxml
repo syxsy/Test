@@ -1,0 +1,15 @@
+
+<view class='middle-box' wx:if="{{!isAuth}}">
+
+    <button  open-type='getUserInfo' bindtap='onGotUserInfo'>微信授权登录</button>
+</view>
+<view class="userinfo" wx:if="{{isAuth}}">
+    <view class='img'>
+         <image class="userinfo-avatar " src='{{avatarUrl}}'></image>
+    </view> 
+    <view class="userinfo-nickname">  
+        <text>{{username}}</text>  
+     </view>
+</view>
+
+      
